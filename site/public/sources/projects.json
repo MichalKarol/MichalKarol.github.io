@@ -1,0 +1,51 @@
+[
+    {
+        "key": "MichalKarol.github.io",
+        "title": "Personal page",
+        "summary": "Personal page build using Vue.js and Facebook comments plugin.",
+        "tags": ["webdev", "vue", "js"]
+    },
+    {
+        "key": "https://eventit.pl",
+        "title": "Event IT",
+        "summary": "IT event calendar for Poland. This site is developed as my engineering degree product. Main technologies are: Vue.js and Hapi.js. Site uses Docker Services to provide containerization. What is more usage of Nginx in front of server allow for better caching and faster response times. Due to copyright issues source code is not available publicly on Github.",
+        "tags": ["webdev", "vue", "hapi.js", "js", "docker", "nginx"],
+        "url": "https://eventit.pl"
+    },
+    {
+        "key": "dropboxignore",
+        "title": "dropboxignore",
+        "summary": "Python tool allowing for watching sync directory and setting Dropbox to ignore paths using .dropboxignore. CI/CD provided by Azure Pipelines",
+        "tags": ["python", "dropbox", "linux", "azure"]
+    },
+    {
+        "key": "ankietyzacja",
+        "title": "Questionnaire",
+        "summary": "Chrome plugin for better UI/UX in PWr questionnaires about classes in semester. Plugin changes order of options, allowing for faster filling the forms.",
+        "tags": ["webdev", "chrome", "js"]
+    },
+    {
+        "key": "AudioFFT",
+        "title": "Audio FFT",
+        "summary": "Qt based program allowing for changing of audio signal into spectrogram form.",
+        "tags": ["qt", "cpp"]
+    },
+    {
+        "key": "DuplicateFinder",
+        "title": "Duplicate Finder",
+        "summary": "C++17 std::filesystem and Boost program options application allowing for detection of duplicate files using Openssl MD5 hash.",
+        "tags": ["cpp", "crypto"]
+    },
+    {
+        "key": "WebsiteMonitor",
+        "title": "Website Monitor",
+        "summary": "Simple bash script notifying the user via mail if change in website is detected.",
+        "tags": ["bash"]
+    },
+    {
+        "key": "QOrganizer",
+        "title": "QOrganizer",
+        "summary": "First repository on Github. Qt based organizer application with Calendar/Mail/RSS/Password Manager. Everything is saved and encrypted using AES256-CBC. Further releases (if there will be any more) could include AES256-GCM as it will provide authentication. What is more, using IMAP library could be a better option than writing it by yourself from scratch with help of RFC standard.",
+        "tags": ["cpp", "qt", "crypto"]
+    }
+]

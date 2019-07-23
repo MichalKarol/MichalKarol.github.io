@@ -1,0 +1,10 @@
+[
+    {
+        "file": "Hello-World-and-how-I-created-this-site.md",
+        "title": "Hello World and how I created this site",
+        "summary": "Motivation driving me to write this blog, and first part of tutorial on how to create own static page on Github ",
+        "date": "2019-07-24",
+        "tags": ["site", "js", "vue"],
+        "image": null
+    }
+]
