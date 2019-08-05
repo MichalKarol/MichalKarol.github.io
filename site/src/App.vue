@@ -33,6 +33,11 @@
         <router-view/>
       </div>
     </div>
+    <div id="cookie-notification" class="notification" v-if="!haveConsent">
+      <button class="delete" @click="set_cookie_consent()"></button>
+      This site uses cookies and other tracking technologies to work correctly (Facebook comment section) and to analyze website traffic (Google Analytics).
+      By browsing this site, you consent to our use of cookies and other tracking technologies.
+    </div>
   </div>
 </template>
 
@@ -49,10 +54,14 @@ $fa-font-path : "../node_modules/@fortawesome/fontawesome-free/webfonts";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+html, body, #app {
+  height: 100%;
+}
+
 #app {
   font-family: 'Montserrat', sans-serif;
   word-break: break-word;
-  margin: 10px;
+  padding: 10px;
 }
 
 #menu {
@@ -66,14 +75,23 @@ a > span {
 h1 {
   text-align: center;
 }
+
+#cookie-notification {
+  bottom: 0px;
+  position: fixed;
+  margin-left: -10px;
+}
+
 </style>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import EventBus from '@/event-bus';
+import CookieService from '@/cookie-service';
 
 @Component({})
 export default class App extends Vue {
   public header = document.title;
+  public haveConsent = CookieService.get_cookie_consent();
 
   private created() {
     EventBus.$on('header-change', (message: string) => {
@@ -81,6 +99,11 @@ export default class App extends Vue {
     });
     this.$store.dispatch('initPosts');
     this.$store.dispatch('initProjects');
+  }
+
+  private set_cookie_consent() {
+    CookieService.set_cookie_consent(true);
+    this.haveConsent = true;
   }
 }
 </script>
