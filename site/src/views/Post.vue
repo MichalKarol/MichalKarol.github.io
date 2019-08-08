@@ -53,12 +53,15 @@ import 'highlight.js/styles/vs2015.css';
 import hljs from 'highlight.js/lib/highlight';
 // @ts-ignore
 import shell from 'highlight.js/lib/languages/shell';
+// @ts-ignore
+import python from 'highlight.js/lib/languages/python';
 
 import { HttpResponse } from 'vue-resource/types/vue_resource';
 import Post from '@/models/post';
 import EventBus from '@/event-bus';
 
 hljs.registerLanguage('shell', shell);
+hljs.registerLanguage('python', python);
 
 @Component({})
 export default class PostView extends Vue {
