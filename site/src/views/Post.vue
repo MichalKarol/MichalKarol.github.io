@@ -1,21 +1,25 @@
 <template>
   <div class="post">
     <div class="columns post-head">
-      <button @click="back()" class="button is-white column-1" title="Back">
+
+      <router-link :to="{name: 'blog'}" class="button is-primary is-inverted column-1"
+        title="Back" aria-label="Back">
         <span class="icon">
             <i class="fas fa-angle-left" aria-hidden="true"></i>
         </span>
-        
-      </button>
+      </router-link>
+
       <div class="column-2">
         Michał Karol on {{currentPost.date}}
       </div>
     </div>
 
     <div class="content" v-html="renderedPost"></div>
+
     <div class="tags">
       <span class="tag" v-for="tag in currentPost.tags" :key="tag">#{{tag}}</span>
     </div>
+
     <div id="fb-wrapper">
        <div 
         class="fb-comments" 
@@ -25,6 +29,7 @@
         data-order-by="time">
       </div>
     </div>
+
   </div>
 </template>
 
@@ -41,6 +46,7 @@ iframe {
 <script lang="ts">
 import Vue from 'vue';
 import {Prop, Component, Watch} from 'vue-property-decorator';
+import { MetaInfo } from 'vue-meta';
 
 
 // @ts-ignore
@@ -58,13 +64,22 @@ import python from 'highlight.js/lib/languages/python';
 
 import { HttpResponse } from 'vue-resource/types/vue_resource';
 import Post from '@/models/post';
-import EventBus from '@/event-bus';
 
 hljs.registerLanguage('shell', shell);
 hljs.registerLanguage('python', python);
 
-@Component({})
+@Component({
+  metaInfo() {
+    return {
+      title: (this as PostView).currentPost.title,
+      meta: [
+        { vmid: 'description', name: 'description', content: (this as PostView).currentPost.summary },
+      ],
+    };
+  },
+})
 export default class PostView extends Vue {
+
   @Prop(String) private readonly id!: string;
   private md = new MarkdownIt().use(MarkdownItHljs, {auto: false, code: false});
 
@@ -78,15 +93,6 @@ export default class PostView extends Vue {
 
   public get renderedPost(): string {
     return this.currentPost.text ? this.md.render(this.currentPost.text) : '';
-  }
-
-  public back() {
-    this.$router.back();
-  }
-
-  public created() {
-    EventBus.$emit('header-change', this.currentPost.title);
-    document.title = this.currentPost.title;
   }
 
   public mounted() {

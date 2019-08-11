@@ -1,6 +1,6 @@
 <template>
   <div class="projects">
-    <paginated-list :items="projects" :action="open_project">
+    <paginated-list :items="projects" :action="open_project" type="external">
     </paginated-list>
   </div>
 </template>
@@ -21,8 +21,12 @@ import Project from '@/models/project';
 
 
 @Component({
-  components: {
-    PaginatedList,
+  components: { PaginatedList },
+  metaInfo: {
+    title: 'Projects',
+    meta: [
+      { vmid: 'description', name: 'description', content: 'List of projects' },
+    ],
   },
 })
 export default class Projects extends Vue {
@@ -32,8 +36,7 @@ export default class Projects extends Vue {
   }
 
   public open_project(item: Project) {
-    const url = this.get_url(item.key);
-    window.open(url, '_blank', 'noopener');
+    return this.get_url(item.key);
   }
 
   public get_url(key: string) {

@@ -1,6 +1,6 @@
 <template>
   <div class="blog">
-    <paginated-list :items="posts" :action="open_post">
+    <paginated-list :items="posts" :action="open_post" type="internal">
     </paginated-list>
   </div>
 </template>
@@ -32,7 +32,7 @@ export default class Blog extends Vue {
   }
 
   private open_post(item: Post) {
-    this.$router.push({ name: 'post', params: {id: item.file}});
+    return { name: 'post', params: {id: item.file}};
   }
 }
 </script>

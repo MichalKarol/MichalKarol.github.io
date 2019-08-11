@@ -8,7 +8,17 @@
         <div class="media-content">
             <div class="content">
                 <p>
-                    <a @click="action(item)"><strong >{{item.title}}</strong></a> <small v-if="item.date"> {{item.date}}</small>
+                    <router-link v-if="is_internal()" :to="action(item)"
+                        :aria-label="item.title">
+                        <strong >{{item.title}}</strong>
+                    </router-link>
+                    <a v-if="!is_internal()" :href="action(item)" :aria-label="item.title"
+                       target="_blank" ref="noreferer">
+                        <strong >{{item.title}}</strong>
+                    </a>
+                    
+                    <small v-if="item.date"> {{item.date}}</small>
+                    
                     <br>
                     {{item.summary}}
                     <div class="tags">
@@ -17,13 +27,19 @@
                 </p>
             </div>
         </div>
-        <div class="media-right">
-            <button v-if="action" @click="action(item)" aria-label="Button"
-                class="button is-white" >
+        <div v-if="action" class="media-right">
+            <router-link v-if="is_internal()" :to="action(item)" class="button is-primary is-inverted column-1"
+                :aria-label="item.title">
                 <span class="icon">
                     <i class="fas fa-angle-right" aria-hidden="true"></i>
                 </span>
-            </button>
+            </router-link>
+            <a v-if="!is_internal()" :href="action(item)" class="button is-primary is-inverted column-1"
+                :aria-label="item.title" target="_blank" ref="noreferer">
+                <span class="icon">
+                    <i class="fas fa-angle-right" aria-hidden="true"></i>
+                </span>
+            </a>
         </div>
     </article>
 </template>
@@ -48,7 +64,14 @@ class ListItem extends Vue {
     private item!: Listable;
 
     @Prop()
-    private action!: (item: Listable) => void;
+    private action!: (item: Listable) => string | object;
+
+    @Prop()
+    private type!: string;
+
+    private is_internal() {
+        return this.type === 'internal';
+    }
 }
 
 export default ListItem;

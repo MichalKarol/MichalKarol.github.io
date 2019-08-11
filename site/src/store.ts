@@ -33,20 +33,17 @@ export default new Vuex.Store({
   },
   actions: {
     initPosts({ commit }) {
-      (Vue as any).http.get(`${SOURCES_URL}/posts.json`)
-        .then((response: HttpResponse) => response.json())
-        .then((posts: Post[]) => commit('addPosts', posts.reverse()));
+      import(/* webpackChunkName: "posts_json" */ '@/sources/posts.json')
+        .then(({default: posts}) => commit('addPosts', posts.reverse()));
     },
     initProjects({ commit }) {
-      (Vue as any).http.get(`${SOURCES_URL}/projects.json`)
-        .then((response: HttpResponse) => response.json())
-        .then((projects: Project[]) => commit('addProjects', projects));
+      import(/* webpackChunkName: "projects_json" */ '@/sources/projects.json')
+        .then(({default: projects}) => commit('addProjects', projects));
     },
     getPost({ commit, state }, key: string) {
       const textDownload = () =>
-        (Vue as any).http.get(`${SOURCES_URL}/${key}`)
-        .then((response: HttpResponse) => response.text())
-        .then((text: string) => commit('addPostText', [key, text]));
+        import(`@/sources/${key}`)
+        .then(({default: text}) => commit('addPostText', [key, text]));
 
       if (!state.posts[key]) {
         this.watch(

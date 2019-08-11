@@ -6,7 +6,7 @@
         <p>Currently working for Nokia Solutions and Networks since 2018. In 2017 I was working as an intern in Intel Technology Poland for 3 months.</p>
         <p>Additionaly I am a student of Wroclaw's University of Science on Computer Science and Management faculty.
           For my enginerring degree I prepared and described an application that shown example usage of Hapi.js framework: 
-          <a href="eventit.pl" target="_blank" rel="noopener noreferrer">Event IT</a>.</p>
+          <a href="eventit.pl" target="_blank" rel="noreferrer">Event IT</a>.</p>
         <p>I decided to created this page in order to practice my web development skills, but also 
           to share interesting ideas, encountered development problems and their solutions.
         </p>
@@ -29,6 +29,7 @@ import Leaflet from '@/components/Leaflet.vue';
 
 @Component({
   components: { Leaflet },
+  metaInfo: { title: 'About me' },
 })
 export default class AboutMe extends Vue {
   public WROCLAW_COORDINATES = [51.1079, 17.0385];

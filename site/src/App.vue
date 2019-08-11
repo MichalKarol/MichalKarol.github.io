@@ -13,13 +13,15 @@
           </ul>
 
           <a href="https://www.github.com/MichalKarol/"
-            target="_blank" ref="noreferer noopener">
+            target="_blank" ref="noreferer"
+            aria-label="Github link">
             <span class="icon is-large">
               <i class="fab fa-github-square fa-2x"></i>
             </span>
           </a>
           <a href="https://www.linkedin.com/in/michalpiotrkarol"
-            target="_blank" ref="noreferer noopener">
+            target="_blank" ref="noreferer"
+            aria-label="Linkedin link">
             <span class="icon is-large">
               <i class="fab fa-linkedin fa-2x"></i>
             </span>
@@ -28,13 +30,13 @@
       </aside>
      </div>
 
-      <div class="column is-main-content">
-        <h1 class="title is-1">{{header}}</h1>
+      <div class="column is-main-content is-10">
+        <h1 class="title is-1">{{title}}</h1>
         <router-view/>
       </div>
     </div>
     <div id="cookie-notification" class="notification" v-if="!haveConsent">
-      <button class="delete" @click="set_cookie_consent()"></button>
+      <button class="delete" @click="set_cookie_consent()" aria-label="Close popup"></button>
       This site uses cookies and other tracking technologies to work correctly (Facebook comment section) and to analyze website traffic (Google Analytics).
       By browsing this site, you consent to our use of cookies and other tracking technologies.
     </div>
@@ -84,19 +86,31 @@ h1 {
 
 </style>
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import EventBus from '@/event-bus';
+import { Component, Vue, Watch } from 'vue-property-decorator';
 import CookieService from '@/cookie-service';
 
-@Component({})
+
+@Component({
+  metaInfo() {
+    return {
+      title: 'Blog',
+      htmlAttrs: {
+        lang: 'en',
+      },
+      meta: [
+          { vmid: 'description', name: 'description', content: 'Personal blog of Michal Karol' },
+      ],
+      changed: (metaInfo) => {
+        (this as App).title = metaInfo.title || '';
+      },
+    };
+  },
+})
 export default class App extends Vue {
-  public header = document.title;
+  public title = '';
   public haveConsent = CookieService.get_cookie_consent();
 
   private created() {
-    EventBus.$on('header-change', (message: string) => {
-      this.header = message;
-    });
     this.$store.dispatch('initPosts');
     this.$store.dispatch('initProjects');
   }

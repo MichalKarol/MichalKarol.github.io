@@ -1,7 +1,7 @@
 <template>
     <div class="paginable-list">
         <div v-for="[key, item] in current_page_items" :key="key" class="item">
-            <list-item :item="item" :action="action"></list-item>
+            <list-item :item="item" :action="action" :type="type"></list-item>
         </div>
         <!-- Pagination -->
         <div v-if="Object.keys(items).length > ITEMS_PER_PAGE">
@@ -50,7 +50,10 @@ class PaginatedList extends Vue {
     private items!: {[id: string]: Listable};
 
     @Prop()
-    private action!: (item: Listable) => void;
+    private action!: (item: Listable) => string | object;
+
+    @Prop()
+    private type!: string;
 
     private ITEMS_PER_PAGE = 10;
     private page = 1;

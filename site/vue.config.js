@@ -7,6 +7,14 @@ module.exports = {
                 'highlight.js$': 'highlight.js/lib/highlight'
             }
         },
+        module: {
+            rules: [
+                {
+                test: /\.md$/i,
+                use: 'raw-loader',
+                },
+            ],
+        },
         plugins: [
             new MinifyPlugin(),
         ],
