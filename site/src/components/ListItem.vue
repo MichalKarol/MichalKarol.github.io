@@ -13,7 +13,7 @@
                         <strong >{{item.title}}</strong>
                     </router-link>
                     <a v-if="!is_internal()" :href="action(item)" :aria-label="item.title"
-                       target="_blank" ref="noreferer">
+                       target="_blank" rel="noreferer">
                         <strong >{{item.title}}</strong>
                     </a>
                     
@@ -35,7 +35,7 @@
                 </span>
             </router-link>
             <a v-if="!is_internal()" :href="action(item)" class="button is-primary is-inverted column-1"
-                :aria-label="item.title" target="_blank" ref="noreferer">
+                :aria-label="item.title" target="_blank" rel="noreferer">
                 <span class="icon">
                     <i class="fas fa-angle-right" aria-hidden="true"></i>
                 </span>

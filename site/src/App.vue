@@ -13,16 +13,16 @@
           </ul>
 
           <a href="https://www.github.com/MichalKarol/"
-            target="_blank" ref="noreferer"
+            target="_blank" rel="noreferer"
             aria-label="Github link">
-            <span class="icon is-large">
+            <span class="icon is-large" id="github-icon">
               <i class="fab fa-github-square fa-2x"></i>
             </span>
           </a>
           <a href="https://www.linkedin.com/in/michalpiotrkarol"
-            target="_blank" ref="noreferer"
+            target="_blank" rel="noreferer"
             aria-label="Linkedin link">
-            <span class="icon is-large">
+            <span class="icon is-large" id="linkedin-icon">
               <i class="fab fa-linkedin fa-2x"></i>
             </span>
           </a>
@@ -82,6 +82,14 @@ h1 {
   bottom: 0px;
   position: fixed;
   margin-left: -10px;
+}
+
+#github-icon {
+  color: #333;
+}
+
+#linkedin-icon {
+  color: #0077b5;
 }
 
 </style>
