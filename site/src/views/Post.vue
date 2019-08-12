@@ -1,15 +1,18 @@
 <template>
   <div class="post">
-    <div class="columns post-head">
+    <div class="columns post-head is-mobile">
 
-      <router-link :to="{name: 'blog'}" class="button is-primary is-inverted column-1"
+      <div class="column is-narrow">
+        <router-link :to="{name: 'blog'}" class="button is-primary is-inverted"
         title="Back" aria-label="Back">
         <span class="icon">
             <i class="fas fa-angle-left" aria-hidden="true"></i>
         </span>
       </router-link>
+      </div>
+      
 
-      <div class="column-2">
+      <div class="column">
         Michał Karol on {{currentPost.date}}
       </div>
     </div>
@@ -53,6 +56,9 @@ import { MetaInfo } from 'vue-meta';
 import MarkdownIt from 'markdown-it';
 // @ts-ignore
 import MarkdownItHljs from 'markdown-it-highlightjs';
+// @ts-ignore
+import iterator from 'markdown-it-for-inline';
+
 
 import 'highlight.js/styles/vs2015.css';
 // @ts-ignore
@@ -81,7 +87,24 @@ hljs.registerLanguage('python', python);
 export default class PostView extends Vue {
 
   @Prop(String) private readonly id!: string;
-  private md = new MarkdownIt().use(MarkdownItHljs, {auto: false, code: false});
+  private md = new MarkdownIt()
+                .use(MarkdownItHljs, {auto: false, code: false})
+                .use(iterator, 'url_new_win', 'link_open', (tokens: any, idx: number) => {
+                      const targetIndex = tokens[idx].attrIndex('target');
+                      const relIndex = tokens[idx].attrIndex('rel');
+
+                      if (targetIndex < 0) {
+                        tokens[idx].attrPush(['target', '_blank']);
+                      } else {
+                        tokens[idx].attrs[targetIndex][1] = '_blank';
+                      }
+
+                      if (relIndex < 0) {
+                        tokens[idx].attrPush(['rel', 'noreferer']);
+                      } else {
+                        tokens[idx].attrs[relIndex][1] = 'noreferer';
+                      }
+                });
 
   public get currentHref(): string {
     return window.location.href;

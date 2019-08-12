@@ -3,7 +3,7 @@ Last month I was writing dropboxignore tool that is helping me in managing my Dr
 
 That is exactly a problem worth solving. I decided to  use Selective Sync in Dropbox and .gitignore structure and rules. It is the idea behind the [dropboxignore](https://github.com/MichalKarol/dropboxignore). Usage of inotify allow me to watch sync directory and exclude them as soon as detected, causing my Dropbox backup to have now way less files and my CPU to keep cool in hot summer in Wrocław. 
 
-After all of development and testing I decided to publish it on [pypi.com](pypi.com). The documentation on packaging is very good and you should definitely check it: [Packaging Python Projects](https://packaging.python.org/tutorials/packaging-projects/), but let me summarize it in 4 points.
+After all of development and testing I decided to publish it on [pypi.org](https://pypi.org). The documentation on packaging is very good and you should definitely check it: [Packaging Python Projects](https://packaging.python.org/tutorials/packaging-projects/), but let me summarize it in 4 points.
 
 ## setup.py - all information about package in single file
 ``` python
@@ -73,16 +73,16 @@ python3 setup.py sdist bdist_wheel
 ```
 As a result of this step, you should have .whl and .tar.gz files inside `dist` directory. 
 
-## Deploying the package to test.pypi.com
-Requirements: Active account on test.pypi.com
+## Deploying the package to test.pypi.org
+Requirements: Active account on test.pypi.org
 
 ``` sh
 python3 -m pip install --user --upgrade twine
 python3 -m twine upload -u $USERNAME -p $PASSWORD --repository-url https://test.pypi.org/legacy/ dist/*
 ```
 
-## Deploying the package to pypi.com
-Requirements: Active account on pypi.com - it is not the same account as on test.pypi.com
+## Deploying the package to pypi.org
+Requirements: Active account on pypi.org - it is not the same account as on test.pypi.org
 
 ``` sh
 python3 -m pip install --user --upgrade twine
