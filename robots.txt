@@ -1,2 +1,3 @@
 User-agent: *
 Disallow:
+Sitemap: http://michalkarol.github.io/sitemap.txt
