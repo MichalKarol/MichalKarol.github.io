@@ -8,7 +8,7 @@ self.__precacheManifest = [
     "url": "/robots.txt"
   },
   {
-    "revision": "935b95108542845396ef6a4dad2ec22c",
+    "revision": "4d65a84fd5b7b1296f55452d20f67ace",
     "url": "/sitemap.txt"
   },
   {
@@ -68,24 +68,24 @@ self.__precacheManifest = [
     "url": "/js/app.886500b9.js"
   },
   {
-    "revision": "6125e81b24adec58d8ddb709b14b45ed",
+    "revision": "b78f0720d461f03553c18e79cfa9d630",
     "url": "/index.html"
-  },
-  {
-    "revision": "7559b3774a0625e8ca6c0160f8f6cfd8",
-    "url": "/fonts/fa-brands-400.7559b377.woff2"
   },
   {
     "revision": "b5cf8ae26748570d8fb95a47f46b69e1",
     "url": "/fonts/fa-solid-900.b5cf8ae2.woff2"
   },
   {
-    "revision": "fe9d62e0d16a333a20e63c3e7595f82e",
-    "url": "/fonts/fa-brands-400.fe9d62e0.woff"
+    "revision": "7559b3774a0625e8ca6c0160f8f6cfd8",
+    "url": "/fonts/fa-brands-400.7559b377.woff2"
   },
   {
     "revision": "4bced7c4c0d61d4f988629bb8ae80b8b",
     "url": "/fonts/fa-solid-900.4bced7c4.woff"
+  },
+  {
+    "revision": "fe9d62e0d16a333a20e63c3e7595f82e",
+    "url": "/fonts/fa-brands-400.fe9d62e0.woff"
   },
   {
     "revision": "e07d9e40b26048d9abe2ef966cd6e263",
