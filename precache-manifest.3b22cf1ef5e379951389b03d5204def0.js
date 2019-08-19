@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/sitemap.txt"
   },
   {
-    "revision": "59215032a4397507b80e5625dc323de3",
-    "url": "/fonts/fa-regular-400.59215032.ttf"
+    "revision": "b5cf8ae26748570d8fb95a47f46b69e1",
+    "url": "/fonts/fa-solid-900.b5cf8ae2.woff2"
   },
   {
     "revision": "3dd836fbc2c72915d965",
@@ -52,8 +52,8 @@ self.__precacheManifest = [
     "url": "/js/posts_json.a8a06230.js"
   },
   {
-    "revision": "03783c5172ee1ad128c576bf88fac168",
-    "url": "/fonts/fa-brands-400.03783c51.eot"
+    "revision": "ed2b8bf117160466ba6220a8f1da54a4",
+    "url": "/fonts/fa-brands-400.ed2b8bf1.ttf"
   },
   {
     "revision": "795f340e0bf5f48aefd7",
@@ -68,12 +68,16 @@ self.__precacheManifest = [
     "url": "/js/app.886500b9.js"
   },
   {
-    "revision": "b78f0720d461f03553c18e79cfa9d630",
+    "revision": "59215032a4397507b80e5625dc323de3",
+    "url": "/fonts/fa-regular-400.59215032.ttf"
+  },
+  {
+    "revision": "6125e81b24adec58d8ddb709b14b45ed",
     "url": "/index.html"
   },
   {
-    "revision": "b5cf8ae26748570d8fb95a47f46b69e1",
-    "url": "/fonts/fa-solid-900.b5cf8ae2.woff2"
+    "revision": "fe9d62e0d16a333a20e63c3e7595f82e",
+    "url": "/fonts/fa-brands-400.fe9d62e0.woff"
   },
   {
     "revision": "7559b3774a0625e8ca6c0160f8f6cfd8",
@@ -84,16 +88,12 @@ self.__precacheManifest = [
     "url": "/fonts/fa-solid-900.4bced7c4.woff"
   },
   {
-    "revision": "fe9d62e0d16a333a20e63c3e7595f82e",
-    "url": "/fonts/fa-brands-400.fe9d62e0.woff"
+    "revision": "03783c5172ee1ad128c576bf88fac168",
+    "url": "/fonts/fa-brands-400.03783c51.eot"
   },
   {
     "revision": "e07d9e40b26048d9abe2ef966cd6e263",
     "url": "/fonts/fa-regular-400.e07d9e40.woff2"
-  },
-  {
-    "revision": "ed2b8bf117160466ba6220a8f1da54a4",
-    "url": "/fonts/fa-brands-400.ed2b8bf1.ttf"
   },
   {
     "revision": "ef3df98419d143d9617fe163bf4edc0b",
@@ -126,5 +126,9 @@ self.__precacheManifest = [
   {
     "revision": "ae04305d53c5eb1ac861",
     "url": "/css/app.eb285bda.css"
+  },
+  {
+    "revision": "1ea6e1ad9c1e704b1a76600733391a1b",
+    "url": "/BingSiteAuth.xml"
   }
 ];
