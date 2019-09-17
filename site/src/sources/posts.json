@@ -14,5 +14,15 @@
         "date": "2019-08-09",
         "tags": ["python", "dropbox", "linux"],
         "image": null
+    },
+    {
+        "file": "Fully-remote-development-with-vscode.md",
+        "title": "Fully remote development with VSCode",
+        "summary": "Development on remote hosts using VSCode and SSH extension",
+        "date": "2019-09-17",
+        "tags": ["linux", "vscode", "ssh"],
+        "image": null
     }
+
+    
 ]
