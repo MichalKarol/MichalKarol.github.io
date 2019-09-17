@@ -3,16 +3,16 @@
 
 ## Posts
 
-### [Fully remote development with VSCode - 2019-09-17](https://michalkarol.github.io/#/post/Fully-remote-development-with-vscode.md)
+### [Fully remote development with VSCode - 2019-09-17](https://michalkarol.github.io/post/Fully-remote-development-with-vscode.md)
 Development on remote hosts using VSCode and SSH extension  
 Tags: #linux #vscode #ssh
 
-### [Creating first python package - dropboxignore - 2019-08-09](https://michalkarol.github.io/#/post/Creating-first-python-package.md)
+### [Creating first python package - dropboxignore - 2019-08-09](https://michalkarol.github.io/post/Creating-first-python-package.md)
 How to build and deploy your Python package.  
 Tags: #python #dropbox #linux
 
 
-### [Hello World and how I created this site - 2019-07-23](https://michalkarol.github.io/#/post/Hello-World-and-how-I-created-this-site.md)
+### [Hello World and how I created this site - 2019-07-23](https://michalkarol.github.io/post/Hello-World-and-how-I-created-this-site.md)
 Motivation driving me to write this blog, and tutorial on how to create own static page on Github  
 Tags: #site #js #vue
 

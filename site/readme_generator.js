@@ -8,7 +8,7 @@ const posts = JSON.parse(fs.readFileSync('src/sources/posts.json', 'utf8')).reve
 const posts_section = `
 ## Posts
 ${posts.map(post => `
-### [${post.title} - ${post.date}](${SITE_URL}/#/post/${post.file})
+### [${post.title} - ${post.date}](${SITE_URL}/post/${post.file})
 ${post.summary}  
 Tags: ${post.tags.map(tag => `#${tag}`).join(' ')}
 `).join('\n')

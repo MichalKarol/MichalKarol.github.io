@@ -8,6 +8,7 @@ Vue.use(Router);
 
 const router = new Router({
   linkActiveClass: 'a is-active',
+  mode: 'history',
   routes: [
     {
       path: '/',
