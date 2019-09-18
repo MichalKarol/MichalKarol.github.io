@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/fonts/fa-regular-400.fc9c63c8.eot"
   },
   {
-    "revision": "a5f87e1e00d85df57c369a3a2b20f96b",
-    "url": "/sitemap.txt"
-  },
-  {
-    "revision": "59215032a4397507b80e5625dc323de3",
-    "url": "/fonts/fa-regular-400.59215032.ttf"
+    "revision": "e4f662f80b34de8e111b",
+    "url": "/css/app.eb285bda.css"
   },
   {
     "revision": "9b51d68ccc9164bbe648",
     "url": "/js/chunk-2d0aab29.39e024a2.js"
+  },
+  {
+    "revision": "407d1318d3164ef8cd0d",
+    "url": "/js/chunk-2d0e6352.21ec68a6.js"
   },
   {
     "revision": "806d2ed4c6a65cab3d32",
@@ -24,24 +24,24 @@ self.__precacheManifest = [
     "url": "/js/chunk-2d22996d.5cb4d9cf.js"
   },
   {
-    "revision": "a8d32bbf23f1fb6c5cb4c0ad76897fc7",
-    "url": "/robots.txt"
+    "revision": "1bb825cae71d4d77934c",
+    "url": "/css/chunk-4781b7fa.06d6805c.css"
   },
   {
     "revision": "1bb825cae71d4d77934c",
     "url": "/js/chunk-4781b7fa.c142c7ab.js"
   },
   {
-    "revision": "407d1318d3164ef8cd0d",
-    "url": "/js/chunk-2d0e6352.21ec68a6.js"
+    "revision": "795f340e0bf5f48aefd7",
+    "url": "/css/chunk-72b7a8f6.f77ec285.css"
   },
   {
     "revision": "795f340e0bf5f48aefd7",
     "url": "/js/chunk-72b7a8f6.c5636438.js"
   },
   {
-    "revision": "982619bcdd09411ffaca",
-    "url": "/js/projects_json.833c64d7.js"
+    "revision": "22c67a26a7352368140b",
+    "url": "/css/chunk-9451e86c.b3a038fd.css"
   },
   {
     "revision": "22c67a26a7352368140b",
@@ -56,12 +56,12 @@ self.__precacheManifest = [
     "url": "/js/posts_json.e8a68912.js"
   },
   {
-    "revision": "ed2b8bf117160466ba6220a8f1da54a4",
-    "url": "/fonts/fa-brands-400.ed2b8bf1.ttf"
+    "revision": "982619bcdd09411ffaca",
+    "url": "/js/projects_json.833c64d7.js"
   },
   {
-    "revision": "22c67a26a7352368140b",
-    "url": "/css/chunk-9451e86c.b3a038fd.css"
+    "revision": "e07d9e40b26048d9abe2ef966cd6e263",
+    "url": "/fonts/fa-regular-400.e07d9e40.woff2"
   },
   {
     "revision": "e5770f9863963fb576942e25214a226d",
@@ -72,16 +72,16 @@ self.__precacheManifest = [
     "url": "/js/app.ce7dd347.js"
   },
   {
-    "revision": "831c1d6d396e2a0924922130f57bf0d9",
-    "url": "/index.html"
-  },
-  {
-    "revision": "b5cf8ae26748570d8fb95a47f46b69e1",
-    "url": "/fonts/fa-solid-900.b5cf8ae2.woff2"
+    "revision": "59215032a4397507b80e5625dc323de3",
+    "url": "/fonts/fa-regular-400.59215032.ttf"
   },
   {
     "revision": "7559b3774a0625e8ca6c0160f8f6cfd8",
     "url": "/fonts/fa-brands-400.7559b377.woff2"
+  },
+  {
+    "revision": "b5cf8ae26748570d8fb95a47f46b69e1",
+    "url": "/fonts/fa-solid-900.b5cf8ae2.woff2"
   },
   {
     "revision": "fe9d62e0d16a333a20e63c3e7595f82e",
@@ -92,16 +92,12 @@ self.__precacheManifest = [
     "url": "/fonts/fa-solid-900.4bced7c4.woff"
   },
   {
+    "revision": "ed2b8bf117160466ba6220a8f1da54a4",
+    "url": "/fonts/fa-brands-400.ed2b8bf1.ttf"
+  },
+  {
     "revision": "03783c5172ee1ad128c576bf88fac168",
     "url": "/fonts/fa-brands-400.03783c51.eot"
-  },
-  {
-    "revision": "e07d9e40b26048d9abe2ef966cd6e263",
-    "url": "/fonts/fa-regular-400.e07d9e40.woff2"
-  },
-  {
-    "revision": "8fdea4e89ac405d9f8db327adb331d8d",
-    "url": "/img/fa-regular-400.8fdea4e8.svg"
   },
   {
     "revision": "acf50f59802f20d8b45220eaae532a1c",
@@ -112,6 +108,10 @@ self.__precacheManifest = [
     "url": "/fonts/fa-solid-900.ef3df984.eot"
   },
   {
+    "revision": "8fdea4e89ac405d9f8db327adb331d8d",
+    "url": "/img/fa-regular-400.8fdea4e8.svg"
+  },
+  {
     "revision": "073c2f3ce60eaf69cc2767ef3d989078",
     "url": "/img/fa-brands-400.073c2f3c.svg"
   },
@@ -120,19 +120,23 @@ self.__precacheManifest = [
     "url": "/img/fa-solid-900.b557f56e.svg"
   },
   {
-    "revision": "795f340e0bf5f48aefd7",
-    "url": "/css/chunk-72b7a8f6.f77ec285.css"
+    "revision": "4bb5575542c20ce97eaa23a9d5df9880",
+    "url": "/index.html"
   },
   {
-    "revision": "1bb825cae71d4d77934c",
-    "url": "/css/chunk-4781b7fa.06d6805c.css"
+    "revision": "a5f87e1e00d85df57c369a3a2b20f96b",
+    "url": "/sitemap.txt"
   },
   {
-    "revision": "e4f662f80b34de8e111b",
-    "url": "/css/app.eb285bda.css"
+    "revision": "a8d32bbf23f1fb6c5cb4c0ad76897fc7",
+    "url": "/robots.txt"
   },
   {
     "revision": "1ea6e1ad9c1e704b1a76600733391a1b",
     "url": "/BingSiteAuth.xml"
+  },
+  {
+    "revision": "887065f194b82d63ccf6fcb7ee1742e4",
+    "url": "/404.html"
   }
 ];
