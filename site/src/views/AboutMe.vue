@@ -3,7 +3,7 @@
     <div class="columns">
       <div class="column content">
         <h3>Michal Karol <a href="mailto:michal.p.karol@gmail.com">&lt;michal.p.karol@gmail.com&gt;</a></h3>
-        <p>Currently working for Nokia Solutions and Networks since 2018. In 2017 I was working as an intern in Intel Technology Poland for 3 months.</p>
+        <p>Currently working for Bright IT since 2019. Worked at Nokia Solutions and Networks since 2018 till 2019, also intern at Intel Technology Poland for 3 months of 2017.</p>
         <p>Additionaly I am a student of Wroclaw's University of Science on Computer Science and Management faculty.
           For my enginerring degree I prepared and described an application that shown example usage of Hapi.js framework: 
           <a href="eventit.pl" target="_blank" rel="noreferrer">Event IT</a>.</p>

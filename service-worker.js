@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.4f3bbdf52e1d68fd5f868e6be87e89ee.js"
+  "/precache-manifest.29569902c0a0fcc336efb2b12b12f353.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "michalkarol.github.io"});
